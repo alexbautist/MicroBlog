@@ -1,11 +1,11 @@
 <?php
 
-$q = intval($_GET['q']);
+$q = intval($_GET['qd']);
 
 $servername = "127.0.0.1";
     $username = "root";
     $password = "";
-    $dbname = "micro_blog";
+    $dbname = "micro_blog1";
 
         $conn = new PDO("mysql:host=$servername;dbname=$dbname",$username,$password);
          
@@ -17,7 +17,7 @@ $servername = "127.0.0.1";
           foreach ($mes as $k){  
               
           echo '<blockquote><p>'.$k['contenu'].'</p>
-               <footer> <a href="message.php?id='.$k['id'].'">Modifier</a>
+               <footer> <a href="Message.php?id='.$k['id'].'">Modifier</a>
                <a href="modifierMessage.php?a=sup&id='.$k['id'].'">Supprimer</a></footer>           
                </blockquote>';
        }

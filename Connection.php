@@ -9,7 +9,7 @@ class Connection {
     $servername = "127.0.0.1";
     $username = "root";
     $password = "";
-    $dbname = "micro_blog"; 
+    $dbname = "micro_blog1"; 
    
     
     

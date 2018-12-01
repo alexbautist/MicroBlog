@@ -42,10 +42,9 @@ function insererCommentaire (comment){
       var parametros = { 'contenu': comment };
         $.ajax({
             data: parametros,//aqui tus datos
-            url: 'InsererCommentaire.php',//aqui va tu direccion donde esta tu funcion php                        
+            url: 'modifierMessage.php',//aqui va tu direccion donde esta tu funcion php                        
             type:'post', //aqui puede ser igual get
             success:function(response){
-             alert(response);
            },
            error:function(data){
             //lo que devuelve si falla tu archivo mifuncion.php
@@ -59,7 +58,7 @@ function insererCommentaire (comment){
             url: 'modifierCommentaire.php',//aqui va tu direccion donde esta tu funcion php                        
             type:'post', //aqui puede ser igual get
             success:function(response){
-             location.href="index.php";
+            location.href="index.php";
            },
            error:function(data){
            alert("no funciona"); //lo que devuelve si falla tu archivo mifuncion.php
