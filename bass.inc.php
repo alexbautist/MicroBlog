@@ -1,4 +1,5 @@
-  <div class="footer-above">
+<footer class="text-center">
+<div class="footer-above">
             <div class="container">
                 <div class="row">
                     <div class="footer-col col-md-4">

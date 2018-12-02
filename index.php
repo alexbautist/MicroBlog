@@ -35,7 +35,6 @@ include './haut.inc.php';
 
 
     <!-- Footer -->
-    <footer class="text-center">
     <?php
     include './bass.inc.php'
     ?>
