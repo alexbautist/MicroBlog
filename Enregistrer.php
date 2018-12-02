@@ -6,10 +6,7 @@ $dbname = "micro_blog1";
 $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
 $mail= $_POST['mail'];
 $mdp= $_POST['mdp'];
-
-$stmt = $conn->prepare("select id from utilisateur where mail= '$mail'");
+$mdpH= password_hash($mdp,PASSWORD_DEFAULT);
+$stmt = $conn->prepare("insert into utilisateur (mail, mdp) values ('$mail','$mdpH')");
 $stmt->execute();
-$result= $stmt->rowCount();
-if($result>0){
-    
-}
+header('Location:Formulaire.php');
