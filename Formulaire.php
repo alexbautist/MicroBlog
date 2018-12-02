@@ -4,7 +4,7 @@ include './haut.inc.php';
 <section>
         <div class="container">
             <div class="row">              
-                <form method="post" action="conexion.php" >
+                <form method="post" action="Connexion.php" >
                     <div class="col-sm-10">  
                         <div class="form-group">
                             <input type=email id="mail" name="mail" class="form-control" placeholder="Mail">

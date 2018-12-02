@@ -45,7 +45,8 @@
                         <a href="#page-top"></a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#">Connexion</a>
+                   <?php include './verif.connexion.inc.php';?>
+                    </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
