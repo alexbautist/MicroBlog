@@ -5,10 +5,13 @@
         <group>
             <file>file:/Users/alejandroreyesbautista/NetBeansProjects/Calais1/Message.php</file>
             <file>file:/Users/alejandroreyesbautista/NetBeansProjects/Calais1/modifierCommentaire.php</file>
-            <file>file:/Users/alejandroreyesbautista/NetBeansProjects/Calais1/Connection.php</file>
-            <file>file:/Users/alejandroreyesbautista/NetBeansProjects/Calais1/cookie.php</file>
-            <file>file:/Users/alejandroreyesbautista/NetBeansProjects/Calais1/UpdateComments.js</file>
+            <file>file:/Users/alejandroreyesbautista/NetBeansProjects/Calais1/Connexion.php</file>
+            <file>file:/Users/alejandroreyesbautista/NetBeansProjects/Calais1/verif.connexion.inc.php</file>
+            <file>file:/Users/alejandroreyesbautista/NetBeansProjects/Calais1/haut.inc.php</file>
+            <file>file:/Users/alejandroreyesbautista/NetBeansProjects/Calais1/logica.js</file>
             <file>file:/Users/alejandroreyesbautista/NetBeansProjects/Calais1/index.php</file>
+            <file>file:/Users/alejandroreyesbautista/NetBeansProjects/Calais1/Formulaire.php</file>
+            <file>file:/Users/alejandroreyesbautista/NetBeansProjects/Calais1/modifierMessage.php</file>
         </group>
     </open-files>
 </project-private>
