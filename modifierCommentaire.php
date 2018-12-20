@@ -2,7 +2,7 @@
 $servername = "127.0.0.1";
 $username = "root";
 $password = "";
-$dbname = "micro_blog1";
+$dbname = "Micro_blog2";
 $comment= $_POST['contenu'];
 $id= $_POST['id'];
     

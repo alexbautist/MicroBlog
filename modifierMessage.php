@@ -3,7 +3,7 @@
 $servername = "127.0.0.1";
 $username = "root";
 $password = "";
-$dbname = "micro_blog1";
+$dbname = "Micro_blog2";
 $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
 
 
@@ -17,7 +17,7 @@ if(isset($_GET['id']) && isset($_GET['a'])){
 }
 else{
     if (isset($_GET['id'])) {
-    $id = $_GET['id'];
+        $id = $_GET['id'];
     $stmt = $conn->prepare("select contenu from messages where id= '$id'");
     $stmt->execute();
     $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);

@@ -6,7 +6,7 @@ include './haut.inc.php';
     <div class="container">
         <div class="row">              
             <form id ="form" method="post" action="Connexion.php" >
-                <div id="erreur" class="alert alert-danger hidden ">Il faut insérer des données! </div>  
+                <div id="notif" class="alert alert-danger hidden ">Il faut insérer des données! </div>  
                 <div class="col-sm-10">  
                     <div class="form-group">
                         <input type=email id="mail" name="mail" class="form-control" placeholder="Mail">
@@ -22,13 +22,13 @@ include './haut.inc.php';
                 </div>  
                 <script>
                     $("#form").submit(function (e) {
-
+                        e.preventDefault();
                         if ($("#mail").val() === "" || $("#mdp").val() === "") {
-
-                            $("#erreur").removeClass("hidden");
-                            e.preventDefault();
+                            $("#notif").removeClass("hidden");
+                      return false;
                         }
-                    });
+                      else{ return true;}
+    });
                 </script>
 
             </form>
