@@ -1,9 +1,12 @@
-
+<?php
+if (!isset($_GET['page'])) {
+    header('location:index.php?page=1');}
+    ?>
 <!DOCTYPE html>
 
 <html lang="fr"> 
     <head>
-        <?php
+        <?php      
         include './haut.inc.php';
         ?>
         <!-- About Section -->

@@ -5,17 +5,20 @@ $username = "root";
 $password = "";
 $dbname = "Micro_blog2";
 $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-$stmt = $conn->prepare("select * from messages");   
+
+        $stmt = $conn->prepare("select * from messages ");   
         $stmt->execute();
         $result = $stmt->setFetchMode(PDO::FETCH_ASSOC); 
         $mes = $stmt->fetchAll();
          
-        $nCommentaires_page= 5;
+        $nCommentairesPage= 5;
         $nCommentaires= $stmt->rowCount();
-        $nPages= ceil($nCommentaires/$nCommentaires_page);
+        $nPages= ceil($nCommentaires/$nCommentairesPage);
 
+               
+        $premierCommentaire= ($_GET['page']-1)*$nCommentaires_page;
 
-
+        
 echo '<nav aria-label="Page navigation example">
             <ul class="pagination justify-content-center">
                 <li class="page-item '.($_GET['page']==1 ? 'disabled' : '').'">
