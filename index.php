@@ -2,11 +2,11 @@
 <!DOCTYPE html>
 
 <html lang="fr"> 
-<head>
-<?php
-include './haut.inc.php';
-?>
-    <!-- About Section -->
+    <head>
+        <?php
+        include './haut.inc.php';
+        ?>
+        <!-- About Section -->
     <section>
         <div class="container">
             <div class="row">              
@@ -17,32 +17,37 @@ include './haut.inc.php';
                         </div>
                     </div>
                     <div class="col-sm-2">
-                        
+
                         <button type="submit" class="btn btn-success btn-lg" onclick= "insererCommentaire(document.getElementById('message').value)">Envoyer</button>
-                      
+
                     </div>                        
                 </form>
             </div>
             <div class="row">
                 <div id="comments" class="col-md-12">
-                 <?php 
-                include 'afficherCommentaires.php';
-                 ?>
+                    <?php
+                    include 'afficherCommentaires.php';
+                    ?>
                 </div>
-                <script>  function voter(){              
-        $.ajax({
-            data: 
-            url: 'vote.php',                       
-            type:'get', 
-            success:function(response){
-           },
-           error:function(data){
-           alert("no funciona");
-           }
-         }); 
-                }
+                <script>  function voter() {
+                    $.ajax({
+                    data:
+                            url: 'vote.php',
+                            type:'get',
+                            success:function(response){
+                            }
+                    ,
+                            error:function (data) {
+                            alert("no funciona");
+                            }
+                    }
+                    );
+                    };
                 </script> 
             </div>
+        </div>
+        <div id="pagination" >
+      <?php include './Pagination.php';?>
         </div>
     </section>
 
