@@ -18,14 +18,14 @@ $stmt = $conn->prepare("select * from messages");
 
 echo '<nav aria-label="Page navigation example">
             <ul class="pagination justify-content-center">
-                <li class="page-item disabled">
-                    <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Précédant</a>
+                <li class="page-item '.($_GET['page']==1 ? 'disabled' : '').'">
+                    <a class="page-link" href="index.php?page='.($_GET['page']-1).'" tabindex="-1" aria-disabled="true">Précédant</a>
                 </li>';
                 for($i=0; $i<$nPages; $i++){                    
-                echo '<li class="page-item"><a class="page-link" href="index.php?page='.($i+1).'">'.($i+1).'</a></li>';
+                echo '<li class="page-item '.($_GET['page']==($i+1) ? 'active' : ""). '"><a class="page-link" href="index.php?page='.($i+1).'">'.($i+1).'</a></li>';
                 }
-                echo '<li class="page-item">
-                    <a class="page-link" href="index.php?page='.($_GET['page']+1).'">Suivant</a>
+                echo '<li class="page-item '.($_GET['page']>=$nPages ? 'disabled' : "").'">
+                    <a class="page-link " aria-disabled="true" href="index.php?page='.($_GET['page']+1).'">Suivant</a>
                 </li>
             </ul>
         </nav>';
