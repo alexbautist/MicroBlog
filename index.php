@@ -26,9 +26,22 @@ include './haut.inc.php';
             <div class="row">
                 <div id="comments" class="col-md-12">
                  <?php 
-                include 'VoirComments.php';
+                include 'afficherCommentaires.php';
                  ?>
                 </div>
+                <script>  function voter(){              
+        $.ajax({
+            data: 
+            url: 'vote.php',                       
+            type:'get', 
+            success:function(response){
+           },
+           error:function(data){
+           alert("no funciona");
+           }
+         }); 
+                }
+                </script> 
             </div>
         </div>
     </section>
@@ -36,6 +49,6 @@ include './haut.inc.php';
 
     <!-- Footer -->
     <?php
-    include './bass.inc.php'
+    include './bass.inc.php';
     ?>
    

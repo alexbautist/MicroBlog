@@ -17,7 +17,11 @@ $servername = "127.0.0.1";
           foreach ($mes as $k){  
               
           echo '<blockquote><p>'.$k['contenu'].'</p>
-               <footer> <a href="Message.php?id='.$k['id'].'">Modifier</a>
+             
+               <footer>
+               <p id="votes"></p>
+               <a href="#" class = "tn btn-success btn-lg" id="vote" onclick="voter()">Vote</button>
+               <a href="Message.php?id='.$k['id'].'">Modifier</a>
                <a href="modifierMessage.php?a=sup&id='.$k['id'].'">Supprimer</a></footer>           
                </blockquote>';
        }

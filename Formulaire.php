@@ -1,5 +1,4 @@
 <?php
-
 include './haut.inc.php';
 ?>
 <section>
@@ -22,12 +21,12 @@ include './haut.inc.php';
                 </div>  
                 <script>
                     $("#form").submit(function (e) {
-                        e.preventDefault();
+                         e.preventDefault();
                         if ($("#mail").val() === "" || $("#mdp").val() === "") {
-                            $("#notif").removeClass("hidden");
+                            $("#notif").removeClass("hidden");                           
                       return false;
+                      else{return true;}
                         }
-                      else{ return true;}
     });
                 </script>
 
