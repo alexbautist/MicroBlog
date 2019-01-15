@@ -1,6 +1,9 @@
 <?php
 if (!isset($_GET['page'])) {
     header('location:index.php?page=1');}
+  if($_GET['page']<1){
+            header('location:index.php?page=1');
+        }
     ?>
 <!DOCTYPE html>
 

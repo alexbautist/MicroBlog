@@ -14,7 +14,8 @@ $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
         $nCommentairesPage= 5;
         $nCommentaires= $stmt->rowCount();
         $nPages= ceil($nCommentaires/$nCommentairesPage);
-
+        
+        
                
         $premierCommentaire= ($_GET['page']-1)*$nCommentaires_page;
 
