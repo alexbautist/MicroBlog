@@ -12,11 +12,16 @@ function voter() {
         data: data,
         url: 'Votes.php',                       
         type: 'Post',
-        success: function (response) {
-           $('u[name='+idVotes+']').text(response);
+        success: function (responseText) {
+           
+           if(responseText==="Error"){
+              $('button[name='+idVotes+']').addClass("disabled");
+           }
+           else{
+             $('u[name='+idVotes+']').text(responseText);
+         }
         },
-        error: function (data) {
-           alert("error");
+        error: function () {
         }
     });
 }

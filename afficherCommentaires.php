@@ -23,8 +23,8 @@ foreach ($resultCommentaires as $k) {
 
     echo '<blockquote><p>' . $k['contenu'] . '</p>           
                <footer>
-               <button type="button" name="voter" class="btn btn-primary btnVoter" >Primary</button>
-               <u name='.$k['id'].'>8</u>
+               <button name='.$k['id'].' type="button" name="voter" class="btn btn-primary btnVoter" >Primary</button>
+               <u name='.$k['id'].'>2</u>
                <a href="Message.php?id=' . $k['id'] . '" class="btn-lg btn-success">Modifier</a>
                <a href="modifierMessage.php?a=sup&id=' . $k['id'] . '" class="btn-lg btn-success">Supprimer</a></footer>           
                </blockquote>';
