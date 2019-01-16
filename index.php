@@ -34,22 +34,7 @@ if (!isset($_GET['page'])) {
                     <?php
                     include 'afficherCommentaires.php';
                     ?>
-                </div>
-                <script>  function voter() {
-                    $.ajax({
-                    data:
-                            url: 'vote.php',
-                            type:'get',
-                            success:function(response){
-                            }
-                    ,
-                            error:function (data) {
-                            alert("no funciona");
-                            }
-                    }
-                    );
-                    };
-                </script> 
+                </div>               
             </div>
         </div>
         <div id="pagination" >

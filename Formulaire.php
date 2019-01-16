@@ -20,14 +20,17 @@ include './haut.inc.php';
 
                 </div>  
                 <script>
-                    $("#form").submit(function (e) {
-                         e.preventDefault();
+                    $("#form").on("submit",function (e) {
+                        e.preventDefault();
                         if ($("#mail").val() === "" || $("#mdp").val() === "") {
-                            $("#notif").removeClass("hidden");                           
-                      return false;
-                      else{return true;}
+                            $("#notif").removeClass("hidden");
+                            return false;
+                        } else {
+                            console.log("entra");
+                            return true;
                         }
-    });
+                    });
+
                 </script>
 
             </form>
