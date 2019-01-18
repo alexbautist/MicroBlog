@@ -1,7 +1,6 @@
 $(document).ready(function(){
  
 $(document).on("click",'.btnVoter', voter);
-//$(document).on("click",'#modMes', modifierCommentaire(document.getElementById('message').value, document.getElementById('idMessage').value));
 $().on('click', '.page-item', );
 
 });
@@ -32,7 +31,7 @@ function insererCommentaire(comment) {
     var parametros = {'contenu': comment};
     $.ajax({
         data: parametros, //aqui tus datos
-        url: 'modifierMessage.php', //aqui va tu direccion donde esta tu funcion php                        
+        url: 'modifierSupprimerCommentaire.php', //aqui va tu direccion donde esta tu funcion php                        
         type: 'post', //aqui puede ser igual get
         success: function (response) {
         },

@@ -31,7 +31,7 @@ foreach ($resultCommentaires as $rC) {
                      <li class="options"><button name='.$rC['id'].' type="button" name="voter" class="btn btn-primary btnVoter" >Voter</button></li>
                      <li class="options"><u name='.$rC['id'].'>'.$rC['votes'].'</u></li>
                      <li class="options"><a href="Message.php?id=' . $rC['id'] . '" class="">Modifier</a></li>
-                     <li class="options"><a href="modifierMessage.php?a=sup&id=' . $rC['id'] . '" class="danger">Supprimer</a></li>
+                     <li class="options"><a href="modifierSupprimerCommentaire.php?a=sup&id=' . $rC['id'] . '" class="danger">Supprimer</a></li>
                      <li class="options">
                  </ul>
               </blockquote>';
