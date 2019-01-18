@@ -87,7 +87,10 @@
                         <button type="submit" class="btn btn-success btn-lg" >Verifier</button>
 
                     </div>  
-                    <script>
+                    <script>                      
+                      
+                        // Function pour valider le formulaire de connexion
+                       
                         $("#form").on("submit", function (e) {
                             if ($("#mail").val() === "" || $("#mdp").val() === "") {
                                 $("#notif").removeClass("hidden");
@@ -96,7 +99,6 @@
                                 return true;
                             }
                         });
-
                     </script>
 
                 </form>

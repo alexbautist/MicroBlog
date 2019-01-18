@@ -1,12 +1,12 @@
 <?php
-
+// Connexion au base de données
 $servername = "127.0.0.1";
 $username = "root";
 $password = "";
 $dbname = "Micro_blog2";
 $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
 
-
+// Condition pour determiner l'action à realiser. Si 'id' et 'a' existent, le message seré supprimé.
 if(isset($_GET['id']) && isset($_GET['a'])){
      $id = $_GET['id'];
      $action = $_GET['a'];
@@ -15,17 +15,19 @@ if(isset($_GET['id']) && isset($_GET['a'])){
      header("Location:index.php");
     
 }
+
+// Si 'a' n'existe pas, le message será inseré
 else{
     if (isset($_GET['id'])) {
         $id = $_GET['id'];
-    $stmt = $conn->prepare("select contenu from messages where id= '$id'");
-    $stmt->execute();
-    $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
-    $mes = $stmt->fetchAll();
+        $stmt = $conn->prepare("select contenu from messages where id= '$id'");
+        $stmt->execute();
+        $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+        $mes = $stmt->fetchAll();
 
     foreach ($mes as $k) {
-        echo '<div class "container"><div class="col-sm-8"><textarea id="message" name="message" class="form-control" > ' . $k['contenu'] . '</textarea>  
-        <input type="hidden" name="id" id="idMessage" value=' . $id . '></div></div>';
+        echo '<textarea id="message" name="message" class="form-control" > ' . $k['contenu'] . '</textarea>  
+        <input type="hidden" name="id" id="idMessage" value=' . $id . '>';
     }
     }
     else{

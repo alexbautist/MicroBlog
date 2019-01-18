@@ -1,6 +1,7 @@
 $(document).ready(function(){
  
 $(document).on("click",'.btnVoter', voter);
+//$(document).on("click",'#modMes', modifierCommentaire(document.getElementById('message').value, document.getElementById('idMessage').value));
 $().on('click', '.page-item', );
 
 });
@@ -27,23 +28,6 @@ function voter() {
     });
 }
 
-//function updateComments() {
-//
-// var parametros = { 'contenu': 'ALe' };
-//        $.ajax({
-//            data: parametros,//aqui tus datos
-//            url: 'UpdateComments.php',//aqui va tu direccion donde esta tu funcion php                        
-//            type:'post', //aqui puede ser igual get
-//            success:function(response){
-//             document.getElementById("comments").innerHTML= response;
-//            
-//           },
-//           error:function(data){
-//            //lo que devuelve si falla tu archivo mifuncion.php
-//           }
-//         });
-//     }
-
 function insererCommentaire(comment) {
     var parametros = {'contenu': comment};
     $.ajax({
@@ -58,13 +42,14 @@ function insererCommentaire(comment) {
     });
 }
 function modifierCommentaire(comment, id) {
+    console.log("llega");
     var parametros = {'contenu': comment, 'id': id};
     $.ajax({
         data: parametros, //aqui tus datos
         url: 'modifierCommentaire.php', //aqui va tu direccion donde esta tu funcion php                        
         type: 'post', //aqui puede ser igual get
         success: function (response) {
-            location.href = "index.php";
+           location.href = "index.php";
         },
         error: function (data) {
             alert("no funciona"); //lo que devuelve si falla tu archivo mifuncion.php

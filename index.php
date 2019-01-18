@@ -1,10 +1,10 @@
 <?php
+// Conditon pour retourner a l'index si la page n'est pas correcte
 if (!isset($_GET['page'])) {
     header('location:index.php?page=1');}
-  if($_GET['page']<1){
-            header('location:index.php?page=1');
-        }
-    ?>
+if($_GET['page']<1){
+    header('location:index.php?page=1');}
+?>
 <!DOCTYPE html>
 
 <html lang="fr"> 
@@ -32,7 +32,7 @@ if (!isset($_GET['page'])) {
             <div class="row">
                 <div id="comments" class="col-md-12">
                     <?php
-                    include 'afficherCommentaires.php';
+                    include 'AfficherCommentaires.php';
                     ?>
                 </div>               
             </div>

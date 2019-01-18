@@ -20,6 +20,9 @@ include './haut.inc.php';
                 </div>                       
             </form>
             <script>
+                
+                // Function pour valider le formulaire d'enregistrement 
+                
                 $("#formE").on("submit", function (e) {
                     if ($("#mailE").val() === "" || $("#mdpE").val() === "") {
                         $("#notifE").removeClass("hidden");

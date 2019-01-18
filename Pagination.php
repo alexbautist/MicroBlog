@@ -1,25 +1,25 @@
 <?php
 
+// Connexion au base de données
 $servername = "127.0.0.1";
 $username = "root";
 $password = "";
 $dbname = "Micro_blog2";
 $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
 
-        $stmt = $conn->prepare("select * from messages ");   
-        $stmt->execute();
-        $result = $stmt->setFetchMode(PDO::FETCH_ASSOC); 
-        $mes = $stmt->fetchAll();
-         
-        $nCommentairesPage= 5;
-        $nCommentaires= $stmt->rowCount();
-        $nPages= ceil($nCommentaires/$nCommentairesPage);
-        
-        
-               
-        $premierCommentaire= ($_GET['page']-1)*$nCommentaires_page;
+// Requete pour obtenir tous les commentaires
+$stmt = $conn->prepare("select * from messages ");   
+$stmt->execute();
+$result = $stmt->setFetchMode(PDO::FETCH_ASSOC); 
+$mes = $stmt->fetchAll();
+ 
+// Calcule le nombre de page a créer
+$nCommentairesPage= 5;
+$nCommentaires= $stmt->rowCount();
+$nPages= ceil($nCommentaires/$nCommentairesPage);
+$premierCommentaire= ($_GET['page']-1)*$nCommentaires_page;
 
-        
+// Création de la pagination        
 echo '<nav aria-label="Page navigation example">
             <ul class="pagination justify-content-center">
                 <li class="page-item '.($_GET['page']==1 ? 'disabled' : '').'">
