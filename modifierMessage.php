@@ -24,8 +24,8 @@ else{
     $mes = $stmt->fetchAll();
 
     foreach ($mes as $k) {
-        echo '<textarea id="message" name="message" class="form-control" > ' . $k['contenu'] . '</textarea>  
-        <input type="hidden" name="id" id="idMessage" value=' . $id . '>';
+        echo '<div class "container"><div class="col-sm-8"><textarea id="message" name="message" class="form-control" > ' . $k['contenu'] . '</textarea>  
+        <input type="hidden" name="id" id="idMessage" value=' . $id . '></div></div>';
     }
     }
     else{

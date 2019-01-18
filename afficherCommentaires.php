@@ -19,15 +19,16 @@ $sqlCommentaires->setFetchMode(PDO::FETCH_ASSOC);
 $resultCommentaires = $sqlCommentaires->fetchAll();
 
 
-foreach ($resultCommentaires as $k) {
+foreach ($resultCommentaires as $rC) {
 
-    echo '<blockquote><p>' . $k['contenu'] . '</p>           
-               <footer>
-               <button name='.$k['id'].' type="button" name="voter" class="btn btn-primary btnVoter" >Primary</button>
-               <u name='.$k['id'].'>2</u>
-               <a href="Message.php?id=' . $k['id'] . '" class="btn-lg btn-success">Modifier</a>
-               <a href="modifierMessage.php?a=sup&id=' . $k['id'] . '" class="btn-lg btn-success">Supprimer</a></footer>           
-               </blockquote>';
+    echo '<blockquote class="messages"><p>' . $rC['contenu'] . '</p>           
+                
+               <ul id="">
+               <li class="options"><button name='.$rC['id'].' type="button" name="voter" class="btn btn-primary btnVoter" >Voter</button></li>
+               <li class="options"><u name='.$rC['id'].'>'.$rC['votes'].'</u></li>
+               <li class="options"><a href="Message.php?id=' . $rC['id'] . '" class="">Modifier</a></li>
+               <li class="options"><a href="modifierMessage.php?a=sup&id=' . $rC['id'] . '" class="danger">Supprimer</a></li>
+               <li class="options"></blockquote>';
 }
  
  

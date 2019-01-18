@@ -1,13 +1,14 @@
 $(document).ready(function(){
  
 $(document).on("click",'.btnVoter', voter);
-    
- });
+$().on('click', '.page-item', );
+
+});
 
 function voter() {
-    var idVotes= $(this).siblings('u').attr('name');
-    var data = {'idVotes': idVotes};
-    
+    var idVotes= $(this).parentsUntil('blockquote').find('u').attr('name');
+    console.log(idVotes);
+    var data = {'idVotes': idVotes};   
     $.ajax({
         data: data,
         url: 'Votes.php',                       
@@ -15,7 +16,7 @@ function voter() {
         success: function (responseText) {
            
            if(responseText==="Error"){
-              $('button[name='+idVotes+']').addClass("disabled");
+              $('button[name='+idVotes+']').addClass("disabled");              
            }
            else{
              $('u[name='+idVotes+']').text(responseText);

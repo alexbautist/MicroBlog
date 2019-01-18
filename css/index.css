@@ -4,3 +4,19 @@
     justify-content: center;
     flex-direction: row;
 }
+
+.options{
+    display: inline;
+    list-style: none;
+    margin-right: 10px;
+}
+
+.messages{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.danger{
+    color: red;
+}

@@ -30,7 +30,7 @@ $sql3=$conn->prepare("select * from messages where id=$idVotes");
 $sql3->execute();
 $sql3->setFetchMode(PDO::FETCH_ASSOC);
 $votesActuels=$sql3->fetchAll();
-foreach ($votes as $k) {
+foreach ($votesActuels as $k) {
 echo $k['votes'];
 }
 
