@@ -6,6 +6,10 @@ $password = "";
 $dbname = "Micro_blog2";
 $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
 
+echo var_dump($_FILES);
+//($_FILES[], $password)
+
+
 // Condition pour determiner l'action à realiser. Si 'id' et 'a' existent, le message seré supprimé.
 if(isset($_GET['id']) && isset($_GET['a'])){
      $id = $_GET['id'];

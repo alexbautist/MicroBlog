@@ -31,13 +31,10 @@ include './haut.inc.php';
                         return true;
                     }
                 });
-
+                
             </script>
             </section>
-
-
             <?php
-
             include './bass.inc.php';
             ?>
 

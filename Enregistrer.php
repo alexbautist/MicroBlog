@@ -17,4 +17,4 @@ $stmt = $conn->prepare("insert into utilisateur (mail, mdp) values ('$mail','$md
 $stmt->execute();
 
 //Retour au formulaire pour se connecter
-header('Location:Formulaire.php');
+header('Location:FormulaireConnexion.php');

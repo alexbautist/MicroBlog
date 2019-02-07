@@ -16,11 +16,13 @@ if($_GET['page']<1){
     <section>
         <div class="container">
             <div class="row">              
-                <form>
+                <form enctype="multipart/form-data">
                     <div class="col-sm-10">  
                         <div class="form-group">
                             <textarea id="message" name="message" class="form-control" placeholder="Message"></textarea>
                         </div>
+                        <input type="file">
+                        <input type="submit" name="submitImage" onclick="pruebasFile()">
                     </div>
                     <div class="col-sm-2">
 

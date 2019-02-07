@@ -1,5 +1,7 @@
 <?php
-
+require_once('/Users/alejandroreyesbautista/Downloads/smarty-3.1.33/libs/Smarty.class.php');
+$smarty = new Smarty();
+$smarty->display('index.tpl');
 // Connexion au base de données
 $servername = "127.0.0.1";
 $username = "root";

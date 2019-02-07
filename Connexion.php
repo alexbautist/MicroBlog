@@ -1,5 +1,4 @@
 <?php
-
 // Connexion au base de données
 $servername = "127.0.0.1";
 $username = "root";
@@ -20,16 +19,19 @@ $result= $stmt->rowCount();
 if($result>0){
     $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
     $res = $stmt->fetchAll();
- 
+    
     // Si l'utilisateur existe et le mot de passe est correcte: créer cookie
-    foreach ($res as $k) {
-         if(password_verify($mdp, $k['mdp'])){
+    foreach ($res as $k) {       
+       
+         if(password_verify($mdp, $k['mdp'])){                   
            $sid= md5($mail.time());
-           $sql = ("UPDATE utilisateur SET sid=? WHERE mail=?");  
+          
+           $sql = ("UPDATE utilisateur SET sid=? WHERE mail=?"); 
            $stmt1= $conn->prepare($sql);
            $stmt1->execute([$sid, $mail]);
-           setcookie("sid", $sid, time()+1800);
-           header('Location:index.php');
+           setcookie("sid", $sid, time()+10);
+           
+           header('Location:index.php?page=1');
            }
         }
      }
