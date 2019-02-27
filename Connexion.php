@@ -1,11 +1,6 @@
 <?php
 // Connexion au base de données
-$servername = "127.0.0.1";
-$username = "root";
-$password = "";
-$dbname = "Micro_blog2";
-$conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-
+require './Connection.php';
 // Identifiants de l'utilisateur 
 $mail= $_POST['mail'];
 $mdp= $_POST['mdp'];

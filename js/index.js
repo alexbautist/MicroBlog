@@ -29,10 +29,10 @@ function voter() {
 }
 
 // Fonction pour insérer les commentaires 
-function insererCommentaire(comment) {
-    var parametros = {'contenu': comment};
-    $.ajax({
-        data: parametros,
+function insererCommentaire(comment,image) {
+ $.ajax({
+     
+        data: {'contenu': comment,'image':image},
         url: 'modifierSupprimerCommentaire.php',                       
         type: 'post',
         success: function (response) {
@@ -44,13 +44,14 @@ function insererCommentaire(comment) {
 
 // Fonction pour modifier les commentaires 
 function modifierCommentaire(comment, id) {
-    var parametros = {'contenu': comment, 'id': id};
+   // var parametros = {'contenu': comment, 'id': id};
     $.ajax({
-        data: parametros,
+        data: $(this).parent(),
         url: 'modifierCommentaire.php',                      
         type: 'post',
         success: function (response) {
            location.href = "index.php";
+           console.log(response);
         },
         error: function (data) {
             alert("Erreur");

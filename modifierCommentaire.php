@@ -1,12 +1,8 @@
 <?php
 
-$servername = "127.0.0.1";
-$username = "root";
-$password = "";
-$dbname = "Micro_blog2";
-$conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+require './Connection.php';
 
-// Récupere l'informations à stcocker du message
+// Récupere l'informations à stocker du message
 $comment = $_POST['contenu'];
 $id = $_POST['id'];
 
