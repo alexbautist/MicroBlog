@@ -6,25 +6,25 @@ if($_GET['page']<1){
     header('location:index.php?page=1');}
 ?>
 <!DOCTYPE html>
-
 <html lang="fr"> 
     <head>
         <?php      
-        include './haut.inc.php';
+        include './inc/haut.inc.php';
         ?>
         <!-- About Section -->
     <section>
         <div class="container">
             <div class="row">              
-                <form action="" method="post" enctype="multipart/form-data">
+                <form action="modifierSupprimerCommentaire.php" method="post" enctype="multipart/form-data">
                     <div class="col-sm-10">  
                         <div class="form-group">
-                            <textarea id="message" name="message" class="form-control" placeholder="Message"></textarea>
+                            <textarea id="message" name="contenu" class="form-control" placeholder="Message"></textarea>
                         </div>
                         <input type="file" name="image" id="image">
                     </div>
                     <div class="col-sm-2">
-                        <button type="submit" class="btn btn-success btn-lg" onclick= "insererCommentaire($('#message').val(),$('#image').val())">Envoyer</button>
+                       <button type="submit" class="btn btn-success btn-lg" >Envoyer</button>
+                      <!--  <button type="submit" class="btn btn-success btn-lg" onclick= "insererCommentaire($('#message').val(),$('#image').val())">Envoyer</button> -->
                     </div>                        
                 </form>
             </div>
@@ -37,13 +37,11 @@ if($_GET['page']<1){
             </div>
         </div>
         <div id="pagination" >
-      <?php include './Pagination.php';?>
+      <?php include './inc/Pagination.inc.php';?>
         </div>
     </section>
-
-
     <!-- Footer -->
     <?php
-    include './bass.inc.php';
+    include './inc/bass.inc.php';
     ?>
    

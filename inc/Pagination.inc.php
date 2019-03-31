@@ -4,7 +4,7 @@ $smarty = new Smarty();
 $smarty->display('index.tpl');
 
 // Connexion au base de données
-require './Connection.php';
+require 'Connection.inc.php';
 
 // Requete pour obtenir tous les commentaires
 $stmt = $conn->prepare("select * from messages ");   

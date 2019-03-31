@@ -13,7 +13,7 @@ function voter() {
     var data = {'idVotes': idVotes};   
     $.ajax({
         data: data,
-        url: 'Votes.php',                       
+        url: '../inc/Votes.inc.php',                       
         type: 'Post',
         success: function (responseText) {          
            if(responseText==="Error"){

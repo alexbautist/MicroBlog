@@ -1,6 +1,6 @@
 <?php
 // Connexion au base de données
-require './Connection.php';
+require './inc/Connection.inc.php';
 // Identifiants de l'utilisateur 
 $mail= $_POST['mail'];
 $mdp= $_POST['mdp'];

@@ -1,6 +1,5 @@
 <?php
-
-include './haut.inc.php';
+include './inc/haut.inc.php';
 ?>
 <section>
     <div class="container">
@@ -19,8 +18,7 @@ include './haut.inc.php';
                     <button type="submit" class="btn btn-success btn-lg" >Enregistrer</button>
                 </div>                       
             </form>
-            <script>
-                
+            <script>             
                 // Function pour valider le formulaire d'enregistrement 
                 
                 $("#formE").on("submit", function (e) {
@@ -30,12 +28,11 @@ include './haut.inc.php';
                     } else {
                         return true;
                     }
-                });
-                
+                });            
             </script>
             </section>
             <?php
-            include './bass.inc.php';
+            include './inc/bass.inc.php';
             ?>
 
 

@@ -4,13 +4,10 @@
 <meta name="author" content="">
 
 <title>Micro blog</title>
-
 <!-- Bootstrap Core CSS -->
 <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
 <!-- Theme CSS -->
 <link href="css/freelancer.css" rel="stylesheet">
-
 <!-- Custom Fonts -->
 <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
@@ -82,14 +79,10 @@
                         </div>
                     </div>
                     <div class="col-sm-2">
-
                         <button type="submit" class="btn btn-success btn-lg" >Verifier</button>
-
                     </div>  
-                    <script>                      
-                      
+                    <script>                                        
                         // Function pour valider le formulaire de connexion
-                       
                         $("#form").on("submit", function (e) {
                             if ($("#mail").val() === "" || $("#mdp").val() === "") {
                                 $("#notif").removeClass("hidden");
@@ -99,12 +92,8 @@
                             }
                         });
                     </script>
-
                 </form>
-
                 </section>
-
-
                 <?php
                 include './bass.inc.php';
                 ?>

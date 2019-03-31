@@ -1,7 +1,7 @@
 <?php
 
 // Connexion au base de données
-require './Connection.php';
+require './inc/Connection.inc.php';
 
 // Récupere les identifiants choisis par l'utilisateur
 $mail= $_POST['mail'];

@@ -1,7 +1,7 @@
 <?php
 
 // Connexion au base de données
-require './Connection.php';
+require './Connection.inc.php';
 
 // Récupere l'IP de l'utilisateur actuel
 $actuelleIp=$_SERVER['REMOTE_ADDR'];

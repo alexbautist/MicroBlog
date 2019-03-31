@@ -1,10 +1,9 @@
-
+<!DOCTYPE html>
 <html lang="fr">
     <head>
         <?php
-        include './haut.inc.php';
+        include './inc/haut.inc.php';
         ?>
-        <!-- About Section -->
     <section> 
         <form method="POST">       
             <?php
@@ -16,7 +15,7 @@
     <!-- Footer -->
     <footer class="text-center">
         <?php
-        include './bass.inc.php'
+        include './inc/bass.inc.php'
         ?>
 
 

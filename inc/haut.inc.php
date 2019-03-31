@@ -4,30 +4,18 @@
 <meta name="author" content="">
 
 <title>Micro blog</title>
-
 <!-- Bootstrap Core CSS -->
 <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
 <!-- Theme CSS -->
 <link href="css/freelancer.css" rel="stylesheet">
-
 <!-- Custom Fonts -->
 <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="css/index.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-<!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-<![endif]-->
-
 </head>
-
 <body id="page-top" class="index">
-
     <!-- Navigation -->
     <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
         <div class="container">
@@ -38,7 +26,6 @@
                 </button>
                 <a class="navbar-brand" href="#page-top">Micro blog</a>
             </div>
-
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
@@ -47,7 +34,7 @@
                     </li>
                     <?php
                     if (isset($_COOKIE['sid'])) {
-                        echo '<li><a href="#">Bienvenue</a></li><li><a href="Deconnexion.php">Deconnexion</a></li>';
+                        echo '<li><a href="#">Bienvenue</a></li><li><a href="Deconnexion.inc.php">Deconnexion</a></li>';
                     } else {
                         echo '<li><a href="./FormulaireConnexion.php">Connexion</a></li>';
                     }
@@ -60,7 +47,6 @@
         </div>
         <!-- /.container-fluid -->
     </nav>
-
     <!-- Header -->
     <header>
         <div class="container">
