@@ -1,8 +1,7 @@
 <?php
 
 // Connexion au base de données
-require './Connection.php';
-
+require './inc/Connection.inc.php';
 
 //($_FILES[], $password)
 // Condition pour determiner l'action à realiser. Si 'id' et 'a' existent, le message seré supprimé.
@@ -28,19 +27,22 @@ else {
         <input type="hidden" name="id" id="idMessage" value=' . $id . '>';
         }
     } else {
-        
-        if(isset($_FILES["image"])){
         $comment = $_POST['contenu'];
         $stmt = ("insert into messages (contenu) values ('$comment')");
         $conn->exec($stmt);
         
+        if(isset($_FILES["image"])){
         $image = $_FILES["image"]["name"];
         $tipo = $_FILES["image"]["type"];
         $size = $_FILES["imge"]["size"];
+        $idImage= $conn->lastInsertId();
         $destino = $_SERVER["DOCUMENT_ROOT"] . '/img/';
-        move_uploaded_file($_FILES["image"]["tmp_name"], $destino.$image);
+        move_uploaded_file($_FILES["image"]["tmp_name"], $destino.$idImage.".jpg");
+        header("Location:index.php");
+        
+        }        
     }
-} }
+}
 
 
 
