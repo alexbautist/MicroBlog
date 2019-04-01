@@ -95,7 +95,7 @@
                 </form>
                 </section>
                 <?php
-                include './bass.inc.php';
+                include './inc/bass.inc.php';
                 ?>
 
 

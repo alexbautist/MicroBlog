@@ -1,6 +1,6 @@
 <?php
 
-require './Connection.php';
+require './inc/Connection.inc.php';
 
 // Récupere l'informations à stocker du message
 $comment = $_POST['contenu'];

@@ -44,9 +44,9 @@ function insererCommentaire(comment,image) {
 
 // Fonction pour modifier les commentaires 
 function modifierCommentaire(comment, id) {
-   // var parametros = {'contenu': comment, 'id': id};
+    var parametros = {'contenu': comment, 'id': id};
     $.ajax({
-        data: $(this).parent(),
+        data: parametros,
         url: 'modifierCommentaire.php',                      
         type: 'post',
         success: function (response) {
@@ -59,18 +59,3 @@ function modifierCommentaire(comment, id) {
     });
 }  
 
-    
- function pruebasFile(){
-    var parametros = {'contenu': "nada", 'id': "nadatambién"};
-    $.ajax({
-        data: parametros,
-        url: 'testFile.php',                      
-        type: 'post',
-        success: function (response) {
-         console.log(response);
-        },
-        error: function (data) {
-            alert("Erreur");
-        }
-    });
- }
