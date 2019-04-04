@@ -4,7 +4,8 @@
 #pagination{
     display: flex;
     justify-content: center;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: center;
 }
 
 .options{
@@ -21,4 +22,81 @@
 
 .danger{
     color: red;
+}
+
+
+#spritelist{
+    display: flex;
+    flex-direction: row;
+    
+}
+
+#spritelist li {
+  list-style: none;
+}
+
+#spritelist li, #spritelist a {
+  height: 50px;
+  display: block;
+}
+
+#feu {
+  left: 0px;
+  width: 50px;
+  background: url('../img/Sprite.png') 0 0;
+}
+
+#facebook {
+  left: 0px;
+  width: 50px;
+  background: url('../img/Sprite.png') -50px 0;
+}
+
+#youtube {
+  left: 0px;
+  width: 50px;
+  background: url('../img/Sprite.png') -100px 0;
+}
+#twitter {
+  left: 0px;
+  width:50px;
+  background: url('../img/Sprite.png') -150px 0;
+}
+
+#linkedin {
+  left: 0px;
+  width:48px;
+  background: url('../img/Sprite.png') -200px 0;
+}
+
+#google {
+  left: 0px;
+  width:40px;
+  background: url('../img/Sprite.png') -250px 0;
+}
+
+
+
+#feu a:hover {
+  background: url('../img/Sprite.png') 0 -50px;
+}
+
+#facebook a:hover {
+  background: url('../img/Sprite.png') -50px -50px;
+}
+
+#youtube a:hover {
+  background: url('../img/Sprite.png') -100px -50px;
+}
+
+#twitter a:hover {
+  background: url('../img/Sprite.png') -150px -50px;
+}
+
+#linkedin a:hover {
+  background: url('../img/Sprite.png') -200px -50px;
+}
+
+#google a:hover {
+  background: url('../img/Sprite.png') -250px -50px;
 }
