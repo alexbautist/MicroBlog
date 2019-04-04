@@ -35,7 +35,7 @@ foreach ($resultCommentaires as $rC) {
                      <li class="options"><u name=' . $rC['id'] . '>' . $rC['votes'] . '</u></li>
                      <li class="options"><a href="Message.php?id=' . $rC['id'] . '" class="">Modifier</a></li>
                      <li class="options"><a href="modifierSupprimerCommentaire.php?a=sup&id=' . $rC['id'] . '" class="danger">Supprimer</a></li>
-                     <li class="options">'.$replace0.' <li>
+                    
 </ul>
               </blockquote>';
     if (file_exists($image)) {

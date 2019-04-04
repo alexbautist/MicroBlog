@@ -24,9 +24,8 @@ if($result>0){
            $sql = ("UPDATE utilisateur SET sid=? WHERE mail=?"); 
            $stmt1= $conn->prepare($sql);
            $stmt1->execute([$sid, $mail]);
-           setcookie("sid", $sid, time()+10);
-           
-           header('Location:index.php?page=1');
+           setcookie("sid", $sid, time()+10);          
+           header('Location:index.php');
            }
         }
      }
